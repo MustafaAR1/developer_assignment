@@ -25,7 +25,7 @@ class MockData {
       "doctor": {
         "name": "Dr. A Syahir",
         "designation": "General Doctor",
-        "image_url": "path_to_doctor_image"
+        "image_url": "https://thumbs.dreamstime.com/b/young-doctor-16088825.jpg"
       },
       "date": "Sunday, 12 June",
       "time": "11:00 - 12:00 AM",

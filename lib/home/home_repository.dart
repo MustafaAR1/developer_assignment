@@ -3,7 +3,8 @@ import 'package:developer_assignment/models/home.dart';
 
 class HomeRepository {
   Future<Home> getHomeData() async {
-    await Future.delayed(const Duration(seconds: 1));
-    return Home.fromJson(MockData.home);
+     await Future.delayed(const Duration(seconds: 2));
+      return Home.fromJson(MockData.home['home']);
+
   }
 }
