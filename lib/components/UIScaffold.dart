@@ -3,20 +3,24 @@ import 'package:flutter/material.dart';
 
 class UiScaffold extends StatelessWidget {
   final Widget body;
-  const UiScaffold({super.key, required this.body});
+  final bool showBackground;
+  const UiScaffold(
+      {super.key, required this.body, this.showBackground = false});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(AssetConstants.background),
-            fit: BoxFit.cover,
-          ),
-        ),
+        decoration: BoxDecoration(
+            image: showBackground
+                ? const DecorationImage(
+                    image: AssetImage(AssetConstants.background),
+                    fit: BoxFit.cover,
+                  )
+                : null),
         child: body,
       ),
     );
