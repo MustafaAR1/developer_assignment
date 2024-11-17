@@ -60,3 +60,4 @@ app.*.map.json
 /linux
 .metadata
 /web
+android/app/google-services.json

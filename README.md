@@ -1,16 +1,58 @@
-# developer_assignment
 
-A new Flutter project.
+
+# Flutter SignIn UI with GetX
+
+A clean and modern sign-in interface built with Flutter and GetX state management.
+
+## Features
+
+- Beautiful and responsive UI design
+- GetX state management implementation
+- Reusable components
+
+## Project Structure
+
+
+lib/
+  ├── controllers/
+  │   └── signup_controller.dart
+  ├── views/
+  │   └── signup_screen.dart
+  ├── components/
+  │   ├── UIButton.dart
+  │   └── UIScaffold.dart
+  └── main.dart
+
+
+## Implementation Details
+
+- Used GetX for efficient state management and dependency injection
+- Implemented form validation using GetX controllers
+- Created reusable custom widgets for buttons and text fields
+- Followed clean code practices and proper folder structure
+- Responsive design that works across different screen sizes
+
+## Planned Features
+
+- [ ] Sign up screen
+- [ ] Home screen after successful login
+
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. Clone the repository
+2. Run `flutter pub get`
+3. Run `flutter run`
 
-A few resources to get you started if this is your first Flutter project:
+## Dependencies
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+dependencies:
+  flutter:
+    sdk: flutter
+  get: ^4.6.6
+
+
+## Contributing
+
+Feel free to submit issues and enhancement requests.
