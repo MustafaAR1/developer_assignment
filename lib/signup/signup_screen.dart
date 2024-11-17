@@ -94,7 +94,9 @@ class SignUpWidget extends StatelessWidget {
                   buttonColor: Colors.white,
                   prefixIcon: Icons.fingerprint,
                   text: StringConstants.signInWithPasskey,
-                  onPressed: () {}),
+                  onPressed: () {
+                    Get.to(const HomeScreen());
+                  }),
               UISpacer.spacerH24(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -103,14 +105,18 @@ class SignUpWidget extends StatelessWidget {
                     child: UIButton(
                         buttonColor: Colors.white,
                         imageIcon: AssetConstants.google,
-                        onPressed: () {}),
+                        onPressed: () {
+                          Get.to(const HomeScreen());
+                        }),
                   ),
                   UISpacer.spacerW24(),
                   Expanded(
                     child: UIButton(
                         buttonColor: Colors.white,
                         imageIcon: AssetConstants.github,
-                        onPressed: () {}),
+                        onPressed: () {
+                          Get.to(const HomeScreen());
+                        }),
                   ),
                 ],
               ),

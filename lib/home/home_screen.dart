@@ -61,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           StoriesSection(),
                           UISpacer.spacerH20(),
-                           AppointmentCard(),
+                          AppointmentCard(),
                           UISpacer.spacerH20(),
                           const CategorySection(),
                           UISpacer.spacerH20(),
@@ -132,9 +132,8 @@ class StoriesSection extends StatelessWidget {
 
 // Appointment Card
 class AppointmentCard extends StatelessWidget {
-   AppointmentCard({super.key});
-    final homecontroller = Get.find<HomeController>();
-
+  AppointmentCard({super.key});
+  final homecontroller = Get.find<HomeController>();
 
   @override
   Widget build(BuildContext context) {
@@ -145,7 +144,7 @@ class AppointmentCard extends StatelessWidget {
         color: Colors.blue[100],
         borderRadius: BorderRadius.circular(15),
       ),
-      child:  Column(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
@@ -153,14 +152,17 @@ class AppointmentCard extends StatelessWidget {
               CircleAvatar(
                 backgroundColor: Colors.blue,
                 backgroundImage: NetworkImage(
-                  homecontroller.homeData.value?.appointment.doctor.imageUrl ?? 'https://placeholder.com/user',
+                  homecontroller.homeData.value?.appointment.doctor.imageUrl ??
+                      'https://placeholder.com/user',
                 ),
-              ),              UISpacer.spacerW16(),
-              if(homecontroller.homeData.value?.appointment.doctor.name != null)
-              Text(homecontroller.homeData.value!.appointment.doctor.name),
+              ),
+              UISpacer.spacerW16(),
+              if (homecontroller.homeData.value?.appointment.doctor.name !=
+                  null)
+                Text(homecontroller.homeData.value!.appointment.doctor.name),
             ],
           ),
-              UISpacer.spacerH10(),
+          UISpacer.spacerH10(),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
